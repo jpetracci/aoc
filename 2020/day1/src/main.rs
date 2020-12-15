@@ -1,8 +1,7 @@
-use std::env;
 use std::fs;
 
 fn part1() {
-    let expense_report = fs::read_to_string("p1_input.txt").expect("error reading file");
+    let expense_report = fs::read_to_string("day1_input.txt").expect("error reading file");
     let expense_report = expense_report.split("\n");
     let values = expense_report.collect::<Vec<&str>>();
 
@@ -19,7 +18,7 @@ fn part1() {
 }
 
 fn part2() {
-    let expense_report = fs::read_to_string("p1_input.txt").expect("error reading file");
+    let expense_report = fs::read_to_string("day1_input.txt").expect("error reading file");
     let expense_report = expense_report.split("\n");
     let values = expense_report.collect::<Vec<&str>>();
 
@@ -39,5 +38,6 @@ fn part2() {
 }
 
 fn main() {
+    //part1();
     part2();
 }

@@ -1,1 +1,1 @@
-Advent of Code solutions. Different years starting with 2015.
+Advent of Code solutions/attemps.
