@@ -11,7 +11,7 @@ fn part1() {
             let val2 = values[j].parse::<i32>().unwrap_or(0);
             let sum = val1 + val2;
             if sum == 2020 {
-                println!("{} {} {}", val1, val2, val1 * val2);
+                println!("part 1: {} {} {}", val1, val2, val1 * val2);
             }
         }
     }
@@ -30,7 +30,7 @@ fn part2() {
                 let val3 = values[k].parse::<i32>().unwrap_or(0);
                 let sum = val1 + val2 + val3;
                 if sum == 2020 {
-                    println!("{}", val1 * val2 * val3);
+                    println!("part 2: {}", val1 * val2 * val3);
                 }
             }
         }
@@ -38,6 +38,6 @@ fn part2() {
 }
 
 fn main() {
-    //part1();
+    part1();
     part2();
 }
