@@ -2,16 +2,15 @@ use std::cmp;
 use std::fs;
 
 fn calc_highest(seats: String) -> i32 {
-    let mut seats = seats.lines();
+    let seats = seats.lines();
     let mut highest = 0;
     let mut seat_list = Vec::new();
     for seat in seats {
-        let mut spots = seat.chars();
+        let spots = seat.chars();
         let mut row_end = 127;
         let mut row_start = 0;
         let mut column_end = 7;
         let mut column_start = 0;
-        let mut seat_id = 0;
 
         for spot in spots {
             // println!(
@@ -31,7 +30,7 @@ fn calc_highest(seats: String) -> i32 {
             //     row_start, row_end, column_start, column_end, seat_id
             // );
         }
-        seat_id = row_start * 8 + column_start;
+        let seat_id = row_start * 8 + column_start;
         highest = cmp::max(highest, seat_id);
         seat_list.push(seat_id);
     }
