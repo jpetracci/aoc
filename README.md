@@ -1,1 +1,1 @@
-Advent of Code solutions/attemps.
+Advent of Code solutions/attemps. I am learning Rust as I go.
