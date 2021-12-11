@@ -4,7 +4,8 @@ fn part1(values: Vec<&str>) -> usize {
     let mut depth = 0;
     let mut horiz = 0;
     for m in values {
-        let mut v = m.split(" ");
+        let v = m.strip_suffix("\r").unwrap_or("");
+        let mut v = v.split(" ");
         let v1 = v.next().unwrap();
         let v2 = v.next().unwrap_or("0");
         let v2 = v2.parse::<usize>().unwrap();
@@ -23,7 +24,8 @@ fn part2(values: Vec<&str>) -> usize {
     let mut depth = 0;
     let mut horiz = 0;
     for m in values {
-        let mut v = m.split(" ");
+        let v = m.strip_suffix("\r").unwrap_or("");
+        let mut v = v.split(" ");
         let v1 = v.next().unwrap();
         let v2 = v.next().unwrap_or("0");
         let v2 = v2.parse::<usize>().unwrap();

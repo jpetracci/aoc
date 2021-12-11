@@ -80,14 +80,16 @@ fn part2(values: Vec<&str>) -> usize {
         v = filter(v.clone(), n, 1);
     }
     // convert to integer
-    let ox = usize::from_str_radix(v[0], 2).unwrap();
+    let ox = usize::from_str_radix(v[0].strip_suffix("\r").unwrap(), 2).unwrap();
+    println!("{:?}", ox);
 
     let mut v = values.clone();
     for n in 0..12 {
         v = filter(v.clone(), n, 0);
     }
     // convert to integer
-    let co2 = usize::from_str_radix(v[0], 2).unwrap();
+    let co2 = usize::from_str_radix(v[0].strip_suffix("\r").unwrap(), 2).unwrap();
+    println!("{:?}", co2);
 
     ox * co2
 }

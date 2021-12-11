@@ -15,7 +15,12 @@ fn main() {
     let values = values.collect::<Vec<&str>>();
     let values: Vec<usize> = values
         .iter()
-        .map(|v| v.parse::<usize>().unwrap_or(0))
+        .map(|v| {
+            v.strip_suffix("\r")
+                .unwrap_or("")
+                .parse::<usize>()
+                .unwrap_or(0)
+        })
         .collect();
 
     println!("{}", part1(values.clone()));
